@@ -1,0 +1,20 @@
+version: 1.0
+
+phases:
+    install:
+        commands:
+            # npm installation
+            - npm install
+    pre_build:
+        commands:
+            # Pulling the environment files from private bucket
+            - echo "pre_build -> commands"
+    build:
+        commands:
+            # Building the react app and deploying to S3 bucket, invalidating the CloudFront
+            - npm run build
+artifacts:
+    files:
+        - build
+    base-directory: 'aws-crud-app'
+    discard-paths: yes
