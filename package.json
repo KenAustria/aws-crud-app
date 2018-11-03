@@ -19,8 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier && lint-staged",
-      "pre-push": "Prettier and linters successfully executed before repo updated."
+      "pre-commit": "npm run prettier && lint-staged"
     }
   },
   "lint-staged": {
