@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "git add . && git commit -m 'Running prettier and linter, and staging, comitting and pushing to branch' && git push origin --",
+    "delivery": "git add . && git commit -m 'Running prettier and linter, and staging, comitting and pushing to branch' && git push origin --",
     "prettier": "prettier --write src/**/*.js",
     "lint": "eslint --debug src/; exit 0",
     "lint:write": "eslint --debug src/ --fix; exit 0",
