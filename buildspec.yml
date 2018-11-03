@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       # This file below, since it has a unique identifier, is replaced by the new version, so we are manually deleting it before adding the react build static files
-      - aws s3 rm --recursive s3://aws-crud-app/precache-manifest.*/
+      - aws s3 rm --recursive s3://aws-crud-app/ --include "precache*"
       # Copy contents of /build to S3.
       - aws s3 cp --recursive --acl public-read ./build s3://aws-crud-app/
       # Set the cache-control headers for service-worker.js to prevent browser caching
