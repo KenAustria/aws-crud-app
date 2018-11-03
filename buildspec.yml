@@ -13,6 +13,9 @@ phases:
         commands:
             # Building the react app and deploying to S3 bucket, invalidating the CloudFront
             - npm run build
+    post_build:
+        commands:
+            – aws s3 sync build/. s3://aws-crud-app/ 
 artifacts:
     files:
         - build
