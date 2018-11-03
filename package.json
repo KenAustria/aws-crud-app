@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run prettier && npm run lint:write && git add . && git commit -m 'Running prettier and linter, and staging, comitting and pushing to branch' && git push origin --",
+    "deploy": "git add . && git commit -m 'Running prettier and linter, and staging, comitting and pushing to branch' && git push origin --",
     "prettier": "prettier --write src/**/*.js",
     "lint": "eslint --debug src/; exit 0",
     "lint:write": "eslint --debug src/ --fix; exit 0",
@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'Git hooks made easy...https://github.com/typicode/husky'"
+      "pre-commit": "npm run prettier && npm run lint:write"
     }
   },
   "eslintConfig": {
