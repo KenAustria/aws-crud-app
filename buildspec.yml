@@ -5,6 +5,7 @@ phases:
         commands:
             # npm installation
             - npm install
+            - npm install -g aws-sdk
     pre_build:
         commands:
             # Pulling the environment files from private bucket
@@ -15,9 +16,9 @@ phases:
             - npm run build
     post_build:
         commands:
-            – aws s3 sync build/. s3://aws-crud-app/ 
+            – aws s3 sync build/. s3://aws-crud-app/
 artifacts:
     files:
-        - build
-    base-directory: 'aws-crud-app'
-    discard-paths: yes
+        - build/.
+    base-directory: 'build'
+    discard-paths: no
