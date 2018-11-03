@@ -39,7 +39,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-jest-enzyme": "^6.0.2",
