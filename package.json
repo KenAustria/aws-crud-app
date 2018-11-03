@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update-repo": "npm run prettier && git add . && git commit -m 'staging, commiting and pushing to master' && git push origin master",
+    "update-repo": "git add . && git commit -m 'staging, commiting and pushing to master' && git push origin master",
     "prettier": "prettier --write src/**/*.js",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix"
