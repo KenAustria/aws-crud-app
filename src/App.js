@@ -10,7 +10,7 @@ const App = () => (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>
-        I love <code>Théo</code>, my cute boy kitten.
+        I love <code>Théo</code>, my cute kitten.
       </p>
       <img
         src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiNk85aytCRlhXSXYzNGJ3WWxUOVB1SjBGTkxkQ1UyZG4wQWpPSWN6aE5RTjNHempmQXBrWjZaK21rTzBvZk1ibElNQkZpR01JUUlaZlBMK0ZlajduNlVrPSIsIml2UGFyYW1ldGVyU3BlYyI6IlFwRjhzWG9qd01IT0tTRmIiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"
