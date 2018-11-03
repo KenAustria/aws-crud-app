@@ -10,7 +10,7 @@ const App = () => (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>
-        I love <code>Théo</code>, my cute kitten.
+        I love <code>Théo</code>, my cute boy kitten.
       </p>
     </header>
   </div>
