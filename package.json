@@ -19,8 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier",
-      "pre-push": "npm start"
+      "pre-commit": "npm run prettier"
     }
   },
   "lint-staged": {
@@ -39,6 +38,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-jest-enzyme": "^6.0.2",
     "eslint-plugin-babel": "^5.1.0",
