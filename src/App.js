@@ -12,9 +12,11 @@ const App = () => (
       <p>
         I love <code>Théo</code>, my cute boy kitten.
       </p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
+      <img
+        src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiNk85aytCRlhXSXYzNGJ3WWxUOVB1SjBGTkxkQ1UyZG4wQWpPSWN6aE5RTjNHempmQXBrWjZaK21rTzBvZk1ibElNQkZpR01JUUlaZlBMK0ZlajduNlVrPSIsIml2UGFyYW1ldGVyU3BlYyI6IlFwRjhzWG9qd01IT0tTRmIiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"
+        alt="AWS CodeBuild Status"
+        width="300"
+      />
     </header>
   </div>
 );
