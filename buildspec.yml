@@ -11,6 +11,7 @@ phases:
       - npm run build
   post_build:
     commands:
+      - aws s3 rm --recursive s3://aws-crud-app/precache-manifest.*/
       # Copy contents of /build to S3.
       - aws s3 cp --recursive --acl public-read ./build s3://aws-crud-app/
       # Set the cache-control headers for service-worker.js to prevent browser caching
@@ -27,6 +28,7 @@ phases:
       # - >
       #   aws cloudfront create-invalidation --distribution-id ${Distribution}
       #   --paths /index.html /service-worker.js
+      - aws s3 rm --recursive s3://aws-crud-app/aws-crud-app/
 artifacts:
   files:
     - '**/*'
