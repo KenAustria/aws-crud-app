@@ -12,11 +12,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update-repo": "npm run prettier && npm run lint:write && git add . && git commit -m 'staging, commiting and pushing to master' && git push origin master",
+    "deploy": "npm run prettier && npm run lint:write && git add . && git commit -m 'test' && git push origin -- ",
     "prettier": "prettier --write src/**/*.js",
     "lint": "eslint --debug src/; exit 0",
     "lint:write": "eslint --debug src/ --fix; exit 0",
-    "deploy-to-s3": "aws s3 sync build/ s3://<name_of_bucket>"
+    "deploy-to-s3": "aws s3 sync build/ s3://<name_of_bucket>",
+    "hbd": "echo \"happy birthday ${1-Brian}! and many returns\" -- "
   },
   "husky": {
     "hooks": {
