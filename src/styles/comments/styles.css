@@ -1,16 +1,6 @@
-.comments-app-component {
-  color: #4B4453;
-  font-style: italic;
-  border:2px dashed #C34A36;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-.comments-list-and-box-components {
-  color: #B0A8B9;
-  /* font-style: italic; */
-  border:1px dashed #FF8066;
+.comments-components {
+  color: #5D5D5D;
+  border:1px solid #7B7B7B;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
