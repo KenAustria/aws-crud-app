@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import '../styles/styles.css';
+import CommentsApp from './comments/container/CommentsApp.js';
 
 // We get a couple of neat tools bundled with `create-react app`:
 // Webpack - Links together .js files (bundling for deployment, `npm run build`).
@@ -12,6 +13,7 @@ import './App.css';
 const App = () => (
   <div className="App">
     <h2>I love Théo, my cute boy kitten.</h2>
+    <CommentsApp />
   </div>
 );
 
