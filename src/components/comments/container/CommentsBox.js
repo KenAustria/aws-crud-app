@@ -7,4 +7,4 @@ const CommentsBox = () => (
   </div>
 );
 
-export default CommentsBox
+export default CommentsBox;

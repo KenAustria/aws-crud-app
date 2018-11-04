@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
-import CommentsApp from '../CommentsApp.js';
 import { shallow } from 'enzyme';
+import CommentsApp from '../CommentsApp.js';
 // Enzyme APIs:
 // Static - Render the given component and return plain HTML
 // Shallow - Render just the given component and none of its children
@@ -16,7 +16,7 @@ it('shows CommentsBox component', () => {
   // We no longer need ReactDOM because we are using Enzyme, and it serves the purpose of ReactDOM.
 
   const wrapped = shallow(<CommentsApp />);
-  expect(wrapped.find(CommentsBox).length).toEqual(1);
+  expect(wrapped.find(CommentsBox)).toHaveLength(1);
 
   // ReactDOM.unmountComponentAtNode(div);
 });

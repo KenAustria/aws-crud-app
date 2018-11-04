@@ -7,4 +7,4 @@ const CommentsList = () => (
   </div>
 );
 
-export default CommentsList
+export default CommentsList;
