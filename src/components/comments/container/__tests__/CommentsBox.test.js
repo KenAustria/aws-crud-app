@@ -21,6 +21,6 @@ it('CommentsBox component has a text area and a button', () => {
 it('CommentsBox has a text area users can type in', () => {
   // https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html
   wrapped.find('textarea').simulate('change', {
-    target: { value: 'new comment' }
-  })
+    target: { value: 'new comment' },
+  });
 });
