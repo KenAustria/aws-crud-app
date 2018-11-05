@@ -15,5 +15,12 @@ afterEach(() => {
 
 it('CommentsBox component has a text area and a button', () => {
   expect(wrapped.find('textarea')).toHaveLength(1);
-  expect(wrapped.find('textarea')).toHaveLength(1);
+  expect(wrapped.find('button')).toHaveLength(1);
+});
+
+it('CommentsBox has a text area users can type in', () => {
+  // https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html
+  wrapped.find('textarea').simulate('change', {
+    target: { value: 'new comment' }
+  })
 });
