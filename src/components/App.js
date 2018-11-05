@@ -1,6 +1,6 @@
 import React from 'react';
 import 'styles/styles.css';
-import CommentsApp from 'components/comments/presentation/CommentsApp.js';
+import CommentsApp from 'components/comments/presentation/CommentsApp';
 
 // We get a couple of neat tools bundled with `create-react app`:
 // Webpack - Links together .js files (bundling for deployment, `npm run build`).
