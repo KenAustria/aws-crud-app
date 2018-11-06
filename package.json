@@ -21,7 +21,8 @@
     "lint": "eslint --debug src/; exit 0",
     "lint:write": "eslint --debug src/ --fix; exit 0",
     "deploy-to-s3": "aws s3 sync build/ s3://<name_of_bucket>",
-    "hbd": "echo \"happy birthday ${1-Brian}! and many returns\" -- "
+    "hbd": "echo \"happy birthday ${1-Brian}! and many returns\" -- ",
+    "test-delivery": "npm run test && git add . && git commit -m 'Running prettier and linter, and staging, comitting and pushing to branch' && git push origin -- "
   },
   "husky": {
     "hooks": {

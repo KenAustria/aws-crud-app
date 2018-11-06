@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo Running unit tests.
-      - npm run test -a
+      - npm run test --watch=all
       - echo Build started on `date`.
       - npm run build
   post_build:
