@@ -12,7 +12,7 @@ import CommentsApp from 'components/comments/presentation/CommentsApp';
 
 const App = () => (
   <div className="App">
-    <h2>AWS-CRUD-Ap</h2>
+    <h2>AWS-CRUD-App</h2>
     <CommentsApp />
   </div>
 );
