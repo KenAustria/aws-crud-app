@@ -23,6 +23,6 @@ it('CommentsBox has a text area users can type in', () => {
   wrapped.find('textarea').simulate('change', {
     target: { value: 'new comment' },
   });
-  wrapped.update(); // Because React re-renders components on setState lkfasjdlfk
+  wrapped.update(); // Because React re-renders components on setState
   expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
 });
