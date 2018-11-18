@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import 'styles/comments/styles.css';
+import { connect } from 'react-redux';
+import * as actions from 'actions/comments';
 
 class CommentsBox extends Component {
   state = {
@@ -13,7 +15,8 @@ class CommentsBox extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // Prevents page reload.
+    // Prevents page reload
+    this.props.saveComment(this.state.comment);
     this.setState({ comment: '' });
   };
 
@@ -33,4 +36,4 @@ class CommentsBox extends Component {
   }
 }
 
-export default CommentsBox;
+export default connect(null, actions)(CommentsBox);
