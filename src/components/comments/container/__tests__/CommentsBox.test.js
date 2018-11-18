@@ -10,7 +10,7 @@ beforeEach(() => {
   wrapped = mount(
     <Root>
       <CommentsBox />
-    </Root>
+    </Root>,
   );
 });
 
@@ -31,15 +31,15 @@ describe('Text Area', () => {
       target: { value: 'new comment' },
     });
     wrapped.update(); // Because React re-renders components on setState
-  })
+  });
 
   it('CommentsBox has a text area users can type in', () => {
     expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
   });
 
   it('When CommentsBox form is submitted text area is emptied', () => {
-    wrapped.find('form').simulate('submit')
+    wrapped.find('form').simulate('submit');
     wrapped.update(); // Because React re-renders components on setState, and the submit handler function is setting comment state to an empty string
     expect(wrapped.find('textarea').prop('value')).toEqual('');
-  })
-})
+  });
+});

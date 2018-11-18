@@ -9,7 +9,7 @@ it('renders without crashing', () => {
     <Root>
       <App />
     </Root>,
-    div
+    div,
   );
 
   expect(div.innerHTML).toContain('AWS-CRUD-App');
