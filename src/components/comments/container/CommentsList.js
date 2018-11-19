@@ -5,18 +5,16 @@ import { connect } from 'react-redux';
 class CommentsList extends Component {
   renderComments() {
     return this.props.comments.map(comment => {
-      return <li key={comment}>{comment}</li>
-    })
+      return <li key={comment}>{comment}</li>;
+    });
   }
 
   render() {
     return (
       <div>
-        <ul>
-          {this.renderComments()}
-        </ul>
+        <ul>{this.renderComments()}</ul>
       </div>
-    )
+    );
   }
 }
 
@@ -28,8 +26,8 @@ class CommentsList extends Component {
 
 function mapStateToProps({ comments }) {
   return {
-    comments
-  }
+    comments,
+  };
 }
 
-export default connect(mapStateToProps)(CommentsList)
+export default connect(mapStateToProps)(CommentsList);
