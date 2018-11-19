@@ -20,7 +20,7 @@ afterEach(() => {
 
 it('CommentsBox component has a text area and a button', () => {
   expect(wrapped.find('textarea')).toHaveLength(1);
-  expect(wrapped.find('button')).toHaveLength(1);
+  expect(wrapped.find('button')).toHaveLength(2);
 });
 
 describe('Text Area', () => {
