@@ -1,10 +1,35 @@
-import React from 'react';
-import '../../../styles/comments/styles.css';
+import React, { Component } from 'react';
+import 'styles/comments/styles.css';
+import { connect } from 'react-redux';
 
-const CommentsList = () => (
-  <div className="comments-components">
-    <h3>CommentsList Component</h3>
-  </div>
-);
+class CommentsList extends Component {
+  renderComments() {
+    return this.props.comments.map(comment => {
+      return <li key={comment}>{comment}</li>
+    })
+  }
 
-export default CommentsList;
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.renderComments()}
+        </ul>
+      </div>
+    )
+  }
+}
+
+// function mapStateToProps(state) {
+//   return {
+//     comments: state.comments
+//   }
+// }
+
+function mapStateToProps({ comments }) {
+  return {
+    comments
+  }
+}
+
+export default connect(mapStateToProps)(CommentsList)

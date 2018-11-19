@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from 'reducers/comments';
 
-export default props => {
-  // Functional component
+export default ({ children, initialState = {} }) => {
+  // Functional component with ES6 destructuring and default value for initialState
   return (
-    <Provider store={createStore(reducers, {})}>
-      {props.children}
+    <Provider store={createStore(reducers, initialState)}>
+      {children}
       {/* ^ Used to wrap other components */}
     </Provider>
   );
