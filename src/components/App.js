@@ -232,17 +232,15 @@ const App = () => {
         <div className="tile is-vertical">
           <div className="tile">
             <div className="tile is-parent is-12">
-              <article className="tile is-child notification" style={backgroundFour}>
+              <article className="tile is-child notification" style={backgroundThree}>
                 <p className="title is-italic">* Why are domains sorted by base domain?</p>
                 <p className="subtitle">
-                  It is easier for users to find domains by the base domain, as they are{' '}
-                  <span className="is-italic">filtering by organization-level in their mind</span>
+                  It is easier for users to find domains by the base domain, as they are <span className="is-italic">filtering by organization-level in their mind</span>
                 </p>
                 <p className="content">
                   {' '}
                   E.g., If a user is looking for an ASPA domain such as 'api.digitalmedia.hhs.gov',
-                  it is natually easier to first look for all domains under 'digitalmedia.hhs.gov'{' '}
-                  <span className="has-text-weight-bold">then</span> look for the 'api' preceding
+                  it is natually easier to first look for all domains under 'digitalmedia.hhs.gov' <span className="has-text-weight-bold">then</span> look for the 'api' preceding
                   'digitalmedia.hhs.gov'
                 </p>
               </article>
