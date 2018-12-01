@@ -13,6 +13,6 @@ it('renders without crashing', () => {
     </Root>,
     div,
   );
-  expect(div.innerHTML).toContain('AWS-CRUD-App');
+  expect(div.innerHTML).toContain('Comments');
   ReactDOM.unmountComponentAtNode(div);
 });
