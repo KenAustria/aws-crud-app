@@ -5,9 +5,8 @@ import CommentsList from 'components/comments/container/CommentsList';
 
 const CommentsApp = () => (
   <div className="comments-components">
-    <h2>CommentsApp Component</h2>
     <CommentsList />
-    <CommentsBox />
+    <CommentsBox />    
   </div>
 );
 
