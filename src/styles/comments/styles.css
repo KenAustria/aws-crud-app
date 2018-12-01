@@ -4,6 +4,10 @@
   margin: 1.25rem 0rem 1.25rem 0rem;
 }
 
+.comments-box-wrapper {
+  margin: 0rem 0rem 1.25rem 0rem;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
