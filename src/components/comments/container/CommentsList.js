@@ -32,7 +32,7 @@ class CommentsList extends Component {
           {this.props.comments.map(comment => {
             i++;
             return (
-              <div className="tile is-parent is-3">
+              <div key={i} className="tile is-parent is-3">
                 <article
                   className={`tile is-child notification ${this.randomizeBulmaColorClasses()}`}
                 >
