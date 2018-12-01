@@ -4,12 +4,23 @@ import { connect } from 'react-redux';
 
 class CommentsList extends Component {
   constructor() {
-    super()
-    this.bulmaColorClasses = [ "is-black", "is-light", "is-dark", "is-link", "is-info", "is-success", "is-warning", "is-danger", "is-primary", "is-white" ];
+    super();
+    this.bulmaColorClasses = [
+      'is-black',
+      'is-light',
+      'is-dark',
+      'is-link',
+      'is-info',
+      'is-success',
+      'is-warning',
+      'is-danger',
+      'is-primary',
+      'is-white',
+    ];
   }
 
   randomizeBulmaColorClasses() {
-    return this.bulmaColorClasses[Math.floor(Math.random() * (this.bulmaColorClasses.length))]
+    return this.bulmaColorClasses[Math.floor(Math.random() * this.bulmaColorClasses.length)];
   }
 
   renderComments() {
@@ -20,13 +31,15 @@ class CommentsList extends Component {
         <div className="tile flex-wrap">
           {this.props.comments.map(comment => {
             i++;
-              return (
-                <div className="tile is-parent is-3">
-                  <article className={`tile is-child notification ${this.randomizeBulmaColorClasses()}`}>
-                    <p className="subtitle">{comment}</p>
-                  </article>
-                </div>
-              )
+            return (
+              <div className="tile is-parent is-3">
+                <article
+                  className={`tile is-child notification ${this.randomizeBulmaColorClasses()}`}
+                >
+                  <p className="subtitle">{comment}</p>
+                </article>
+              </div>
+            );
           })}
         </div>
       </div>
@@ -34,11 +47,7 @@ class CommentsList extends Component {
   }
 
   render() {
-    return (
-      <div className="comments-list-wrapper">
-        {this.renderComments()}
-      </div>
-    );
+    return <div className="comments-list-wrapper">{this.renderComments()}</div>;
   }
 }
 
