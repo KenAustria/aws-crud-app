@@ -25,13 +25,25 @@ class CommentsBox extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <div className="control">
-            <textarea className="textarea" placeholder="Add a comment" onChange={this.handleChange} value={this.state.comment}></textarea>
+            <textarea
+              className="textarea"
+              placeholder="Add a comment"
+              onChange={this.handleChange}
+              value={this.state.comment}
+            />
           </div>
           <div>
-            <button className="button is-success is-outlined is-fullwidth buttons-spacing">Submit</button>
+            <button className="button is-success is-outlined is-fullwidth buttons-spacing">
+              Submit
+            </button>
           </div>
         </form>
-        <a className="button is-info is-outlined is-fullwidth buttons-spacing" onClick={this.props.fetchComments}>Fetch</a>
+        <button
+          className="button is-info is-outlined is-fullwidth buttons-spacing"
+          onClick={this.props.fetchComments}
+        >
+          Fetch
+        </button>
       </div>
     );
   }
