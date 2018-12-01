@@ -1,11 +1,18 @@
 /* Decided to use Bulma classes - 11/26/18 */
 
-/* Not using - 11/26/18 */
-.comments-components {
-  /* color: #5D5D5D;
-  border:1px solid #7B7B7B;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%; */
+.comments-list-wrapper {
+  margin: 1.25rem 0rem 1.25rem 0rem;
 }
-/* Not using - 11/26/18 */
+
+.comments-box-wrapper {
+  margin: 0rem 0rem 1.25rem 0rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+/* https://stackoverflow.com/questions/42931638/how-to-make-tiles-wrap-with-bulma-css */
+
+.buttons-spacing {
+  margin-top: 0.5rem;
+}
