@@ -4,7 +4,7 @@ import CommentsBox from 'components/comments/container/CommentsBox';
 import CommentsList from 'components/comments/container/CommentsList';
 
 const CommentsApp = () => (
-  <div className="comments-components">
+  <div>
     <CommentsList />
     <CommentsBox />
   </div>

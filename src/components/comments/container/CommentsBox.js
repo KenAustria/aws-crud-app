@@ -22,7 +22,7 @@ class CommentsBox extends Component {
 
   render() {
     return (
-      <div className="comments-components">
+      <div>
         <h3>CommentsBox Component</h3>
         <form onSubmit={this.handleSubmit}>
           <h4>Add a Comment</h4>
