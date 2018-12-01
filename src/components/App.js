@@ -23,11 +23,13 @@ library.add(fab, fas, far);
 const App = () => {
   return (
     <div>
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">Comments</h1>
-            <h2 class="subtitle">Simple CRUD App built with React (w/ Jest & Enzyme Testing) and AWS Microservices</h2>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">Comments</h1>
+            <h2 className="subtitle">
+              Simple CRUD App built with React (w/ Jest & Enzyme Testing) and AWS Microservices
+            </h2>
           </div>
         </div>
       </section>
