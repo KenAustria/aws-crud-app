@@ -16,9 +16,9 @@ beforeEach(() => {
   );
 });
 
-it('CommentsList creates one <li> per comment', () => {
-  console.log(wrapped.find('li').length);
-  expect(wrapped.find('li')).toHaveLength(2);
+it('CommentsList creates one <article> per comment', () => {
+  console.log(wrapped.find('article').length);
+  expect(wrapped.find('article')).toHaveLength(2);
 });
 
 it('CommentsList shows text for each comment', () => {

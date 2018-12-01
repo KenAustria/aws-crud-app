@@ -24,7 +24,6 @@ class CommentsList extends Component {
   }
 
   renderComments() {
-    console.log(this.props.comments.length);
     let i = 0;
     return (
       <div className="tile is-ancestor">

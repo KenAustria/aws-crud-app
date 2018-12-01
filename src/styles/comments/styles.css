@@ -7,3 +7,8 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
+/* https://stackoverflow.com/questions/42931638/how-to-make-tiles-wrap-with-bulma-css */
+
+.buttons-spacing {
+  margin-top: 0.5rem;
+}
