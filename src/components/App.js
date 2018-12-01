@@ -34,7 +34,7 @@ const App = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container is-fluid">
           <CommentsApp />
         </div>
       </section>

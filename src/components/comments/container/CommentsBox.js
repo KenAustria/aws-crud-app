@@ -23,15 +23,15 @@ class CommentsBox extends Component {
   render() {
     return (
       <div>
-        <h3>CommentsBox Component</h3>
         <form onSubmit={this.handleSubmit}>
-          <h4>Add a Comment</h4>
-          <textarea onChange={this.handleChange} value={this.state.comment} />
+          <div className="control">
+            <textarea className="textarea" placeholder="Add a comment" onChange={this.handleChange} value={this.state.comment}></textarea>
+          </div>
           <div>
-            <button>Submit Comment</button>
+            <button className="button is-success is-outlined is-fullwidth buttons-spacing">Submit</button>
           </div>
         </form>
-        <button onClick={this.props.fetchComments}>Fetch Comments</button>
+        <a className="button is-info is-outlined is-fullwidth buttons-spacing" onClick={this.props.fetchComments}>Fetch</a>
       </div>
     );
   }
