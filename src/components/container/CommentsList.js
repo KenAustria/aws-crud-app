@@ -51,7 +51,7 @@ class CommentsList extends Component {
 }
 
 function mapStateToProps({ comments }) {
-  console.log(comments)
+  console.log(comments);
   return {
     comments,
   };

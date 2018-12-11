@@ -1,7 +1,7 @@
 import { SAVE_COMMENT, FETCH_COMMENTS } from 'actions/types';
 
 export default function(state = [], action) {
-  console.log(state)
+  console.log(state);
   switch (action.type) {
     case SAVE_COMMENT:
       return [...state, action.payload];
@@ -9,7 +9,7 @@ export default function(state = [], action) {
       const comments = action.payload.data.map(comment => comment.name);
       return [...state, ...comments];
     default:
-      console.log(state)
+      console.log(state);
       return state;
   }
 }
