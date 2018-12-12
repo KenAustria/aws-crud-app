@@ -8,22 +8,22 @@ beforeEach(() => {
   moxios.install();
   moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
     status: 200,
-    response: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }]
-  })
+    response: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }],
+  });
   // ^ Moxios intercepting axios' attempted AJAX call and returns an object to axios, fools axios into thinking the object it is getting is from a successful AJAX call
-})
+});
 
 afterEach(() => {
   moxios.uninstall();
-})
+});
 
-it('Entire app can fetch a list of comments and display them', (done) => {
+it('Entire app can fetch a list of comments and display them', done => {
   // Attempt to render the *entire* app
   const wrapped = mount(
     <Root>
       <App />
-    </Root>
-  )
+    </Root>,
+  );
   // Find the 'fetchComments' button and click it
   wrapped.find('.fetch-comments').simulate('click');
   // ^ Will kick off data fetching process
@@ -32,7 +32,7 @@ it('Entire app can fetch a list of comments and display them', (done) => {
   setTimeout(() => {
     wrapped.update();
     // Expect to find a list of comments!
-    expect(wrapped.find('article').length).toEqual(2);
+    expect(wrapped.find('article')).toHaveLength(2);
     done();
     // ^ Jest will consider the test complete only once we invoke the done function
   }, 100);
