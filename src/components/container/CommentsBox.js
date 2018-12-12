@@ -39,7 +39,7 @@ class CommentsBox extends Component {
           </div>
         </form>
         <button
-          className="button is-info is-outlined is-fullwidth buttons-spacing"
+          className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing"
           onClick={this.props.fetchComments}
         >
           Fetch

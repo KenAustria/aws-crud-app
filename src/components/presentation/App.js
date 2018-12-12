@@ -4,6 +4,7 @@ import CommentsApp from 'components/presentation/CommentsApp';
 import 'bulma/css/bulma.css';
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// ^ Use this component in child components to render font awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -42,11 +43,7 @@ const App = () => {
         <footer className="footer">
           <div className="content has-text-centered">
             <p>
-              <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source
-              code is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed{' '}
-              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+              <FontAwesomeIcon icon={['fas', 'cat']} size="6x" transform={{ rotate: 38 }} />
             </p>
           </div>
         </footer>

@@ -1,6 +1,6 @@
 import React from 'react';
-import 'styles/styles.css';
-import CommentsApp from 'components/comments/presentation/CommentsApp';
+import 'styles.css';
+import CommentsApp from 'components/presentation/CommentsApp';
 import 'bulma/css/bulma.css';
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
