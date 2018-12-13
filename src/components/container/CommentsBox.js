@@ -43,13 +43,13 @@ class CommentsBox extends Component {
             />
           </div>
           <div>
-            <button className="button is-success is-outlined is-fullwidth buttons-spacing">
+            <button className="button is-success is-outlined is-fullwidth buttons-spacing" type="button">
               Submit
             </button>
           </div>
         </form>
         <button
-          className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing"
+          className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing" type="button"
           onClick={fetchComments}
         >
           Fetch
