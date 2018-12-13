@@ -45,7 +45,10 @@ class CommentsBox extends Component {
           </div>
           <div>
             {/* https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md */}
-            <button className="button is-success is-outlined is-fullwidth buttons-spacing" type="submit">
+            <button
+              className="button is-success is-outlined is-fullwidth buttons-spacing"
+              type="submit"
+            >
               Submit
             </button>
           </div>
