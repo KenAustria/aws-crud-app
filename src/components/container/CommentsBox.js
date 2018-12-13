@@ -57,7 +57,7 @@ class CommentsBox extends Component {
 }
 
 CommentsBox.propTypes = {
-  saveComment: PropTypes.func
+  saveComment: PropTypes.func,
 };
 
 export default connect(
