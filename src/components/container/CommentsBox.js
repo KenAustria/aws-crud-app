@@ -4,13 +4,18 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 class CommentsBox extends Component {
-  state = {
-    comment: '',
-  };
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      comment: '',
+    };
+    const { comment } = this.state
+  }
 
   handleChange = event => {
     this.setState({ comment: event.target.value });
-    // console.log(this.state.comment);
+    console.log(this.comment);
   };
 
   handleSubmit = event => {
