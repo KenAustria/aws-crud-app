@@ -43,13 +43,18 @@ class CommentsBox extends Component {
             />
           </div>
           <div>
-            <button className="button is-success is-outlined is-fullwidth buttons-spacing" type="button">
+            {/* https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md */}
+            <button
+              className="button is-success is-outlined is-fullwidth buttons-spacing"
+              type="button"
+            >
               Submit
             </button>
           </div>
         </form>
         <button
-          className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing" type="button"
+          className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing"
+          type="button"
           onClick={fetchComments}
         >
           Fetch
@@ -59,6 +64,7 @@ class CommentsBox extends Component {
   }
 }
 
+// https://reactjs.org/docs/typechecking-with-proptypes.html
 CommentsBox.propTypes = {
   saveComment: PropTypes.func,
   fetchComments: PropTypes.func,

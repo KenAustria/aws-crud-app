@@ -32,6 +32,7 @@ module.exports = {
 		'space-before-function-paren': 0, // Incompatible with prettier
 
 		'import/no-unresolved': 'off',
+		"react/destructuring-assignment": '[<enabled>, "always", { "ignoreClassFields": true }]',
 
 		'max-len': ['error', 600, 2, { ignoreUrls: true, }], // airbnb is allowing some edge cases
 		'no-console': 'off', // airbnb is using warn and I (Refayat) refuse to comply with what I think is quite ridiculous...
