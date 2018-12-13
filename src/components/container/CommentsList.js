@@ -24,11 +24,13 @@ class CommentsList extends Component {
   }
 
   renderComments() {
+    const { comments } = this.props
+
     let i = 0;
     return (
       <div className="tile is-ancestor">
         <div className="tile flex-wrap">
-          {this.props.comments.map(comment => {
+          {comments.map(comment => {
             i++;
             return (
               <div key={i} className="tile is-parent is-3">
