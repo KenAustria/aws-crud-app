@@ -32,9 +32,8 @@ module.exports = {
 		'space-before-function-paren': 0, // Incompatible with prettier
 
 		'import/no-unresolved': 'off',
-		'max-len': 'off',
 
-		'max-len': ['error', 300, 2, { ignoreUrls: true, }], // airbnb is allowing some edge cases
+		'max-len': ['error', 600, 2, { ignoreUrls: true, }], // airbnb is allowing some edge cases
 		'no-console': 'off', // airbnb is using warn
 		'no-alert': 'error', // airbnb is using warn
 
