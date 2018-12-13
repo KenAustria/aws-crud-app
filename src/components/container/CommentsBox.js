@@ -13,14 +13,16 @@ class CommentsBox extends Component {
 
   handleChange = event => {
     this.setState({ comment: event.target.value });
-    const { comment } = this.state
+    const { comment } = this.state;
     console.log(comment);
   };
 
   handleSubmit = event => {
     event.preventDefault();
     // Prevents page reload
-    this.props.saveComment(this.state.comment);
+    const { saveComment } = this.props
+    const { comment } = this.state
+    saveComment(this.state.comment);
     this.setState({ comment: '' });
   };
 

@@ -34,7 +34,7 @@ module.exports = {
 		'import/no-unresolved': 'off',
 
 		'max-len': ['error', 600, 2, { ignoreUrls: true, }], // airbnb is allowing some edge cases
-		'no-console': 'off', // airbnb is using warn
+		'no-console': 'off', // airbnb is using warn and I (Refayat) refuse to comply with what I think is quite ridiculous...
 		'no-alert': 'error', // airbnb is using warn
 
 		'no-param-reassign': 'off', // Not our taste?
