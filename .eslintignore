@@ -1,3 +1,5 @@
 /.git
 /.vscode
 node_modules
+# https://eslint.org/docs/user-guide/configuring#using-eslintignore-in-packagejson
+/src/serviceWorker.js

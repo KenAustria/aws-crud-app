@@ -1,5 +1,5 @@
-import { saveComment } from 'actions/comments';
-import { SAVE_COMMENT } from 'actions/comments/types';
+import { saveComment } from 'actions';
+import { SAVE_COMMENT } from 'actions/types';
 
 describe('saveComment', () => {
   it('Has the correct type', () => {

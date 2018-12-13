@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import 'styles/comments/styles.css';
+import 'styles.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class CommentsList extends Component {
   constructor() {
@@ -23,12 +24,13 @@ class CommentsList extends Component {
     return this.bulmaColorClasses[Math.floor(Math.random() * this.bulmaColorClasses.length)];
   }
 
-  renderComments() {
+  renderComments(comments) {
     let i = 0;
+
     return (
       <div className="tile is-ancestor">
         <div className="tile flex-wrap">
-          {this.props.comments.map(comment => {
+          {comments.map(comment => {
             i++;
             return (
               <div key={i} className="tile is-parent is-3">
@@ -46,11 +48,19 @@ class CommentsList extends Component {
   }
 
   render() {
-    return <div className="comments-list-wrapper">{this.renderComments()}</div>;
+    const { comments } = this.props;
+
+    return <div className="comments-list-wrapper">{this.renderComments(comments)}</div>;
   }
 }
 
+// https://reactjs.org/docs/typechecking-with-proptypes.html
+CommentsList.propTypes = {
+  comments: PropTypes.array,
+};
+
 function mapStateToProps({ comments }) {
+  console.log(comments);
   return {
     comments,
   };

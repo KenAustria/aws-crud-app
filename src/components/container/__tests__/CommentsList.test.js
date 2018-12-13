@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import CommentsList from 'components/comments/container/CommentsList';
+import CommentsList from 'components/container/CommentsList';
 import Root from 'Root';
 
 let wrapped;

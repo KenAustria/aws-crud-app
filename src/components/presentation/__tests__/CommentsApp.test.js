@@ -5,9 +5,9 @@ import { shallow } from 'enzyme';
 // Static - Render the given component and return plain HTML.
 // Shallow - Render just the given component and none of its children components.
 // Full DOM - Render the component and all of its children + let us modify it afterwards.
-import CommentsApp from 'components/comments/presentation/CommentsApp';
-import CommentsBox from 'components/comments/container/CommentsBox';
-import CommentsList from 'components/comments/container/CommentsList';
+import CommentsApp from 'components/presentation/CommentsApp';
+import CommentsBox from 'components/container/CommentsBox';
+import CommentsList from 'components/container/CommentsList';
 
 let wrapped;
 // ^ Because JS scoping
