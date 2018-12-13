@@ -29,6 +29,7 @@ class CommentsBox extends Component {
 
   render() {
     const { comment } = this.state;
+    const { fetchComments } = this.props;
 
     return (
       <div>
@@ -60,6 +61,7 @@ class CommentsBox extends Component {
 
 CommentsBox.propTypes = {
   saveComment: PropTypes.func,
+  fetchComments: PropTypes.func
 };
 
 export default connect(
