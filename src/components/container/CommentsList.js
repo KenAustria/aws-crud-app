@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'styles.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class CommentsList extends Component {
   constructor() {
@@ -24,7 +25,7 @@ class CommentsList extends Component {
   }
 
   renderComments() {
-    const { comments } = this.props
+    const { comments } = this.props;
 
     let i = 0;
     return (
@@ -51,6 +52,11 @@ class CommentsList extends Component {
     return <div className="comments-list-wrapper">{this.renderComments()}</div>;
   }
 }
+
+// https://reactjs.org/docs/typechecking-with-proptypes.html
+CommentsList.propTypes = {
+  comments: PropTypes.array
+};
 
 function mapStateToProps({ comments }) {
   console.log(comments);
