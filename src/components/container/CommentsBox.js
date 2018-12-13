@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'styles.css';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
+import PropTypes from 'prop-types';
 
 class CommentsBox extends Component {
   constructor(props) {
@@ -54,6 +55,10 @@ class CommentsBox extends Component {
     );
   }
 }
+
+CommentsBox.propTypes = {
+  saveComment: PropTypes.func
+};
 
 export default connect(
   null,
