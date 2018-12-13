@@ -29,11 +29,13 @@ it('Entire app can fetch a list of comments and display them', done => {
   // ^ Will kick off data fetching process
 
   // Need to introduce a TINY little pause for moxios to intercept axios call when action creator called, this way the line below will expect whatever is returned by moxios and not axios
-  setTimeout(() => {
+  moxios.wait(() => {
     wrapped.update();
     // Expect to find a list of comments!
     expect(wrapped.find('article')).toHaveLength(2);
     done();
     // ^ Jest will consider the test complete only once we invoke the done function
-  }, 100);
+    wrapped.unmount();
+    // Clean up at the end of a test
+  });
 });
