@@ -22,4 +22,5 @@ Root.propTypes = {
   initialState: PropTypes.object,
 };
 
+// https://stackoverflow.com/questions/44582209/proptypes-in-functional-stateless-component
 export default Root;
