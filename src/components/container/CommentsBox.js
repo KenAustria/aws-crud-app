@@ -50,7 +50,7 @@ class CommentsBox extends Component {
         </form>
         <button
           className="fetch-comments button is-info is-outlined is-fullwidth buttons-spacing"
-          onClick={this.props.fetchComments}
+          onClick={fetchComments}
         >
           Fetch
         </button>
@@ -61,7 +61,7 @@ class CommentsBox extends Component {
 
 CommentsBox.propTypes = {
   saveComment: PropTypes.func,
-  fetchComments: PropTypes.func
+  fetchComments: PropTypes.func,
 };
 
 export default connect(
