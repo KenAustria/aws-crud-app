@@ -20,9 +20,9 @@ class CommentsBox extends Component {
   handleSubmit = event => {
     event.preventDefault();
     // Prevents page reload
-    const { saveComment } = this.props
-    const { comment } = this.state
-    saveComment(this.state.comment);
+    const { saveComment } = this.props;
+    const { comment } = this.state;
+    saveComment(comment);
     this.setState({ comment: '' });
   };
 
