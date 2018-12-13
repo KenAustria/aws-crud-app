@@ -56,7 +56,7 @@ class CommentsList extends Component {
 
 // https://reactjs.org/docs/typechecking-with-proptypes.html
 CommentsList.propTypes = {
-  comments: PropTypes.array
+  comments: PropTypes.array,
 };
 
 function mapStateToProps({ comments }) {
