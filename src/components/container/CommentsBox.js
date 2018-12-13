@@ -22,12 +22,14 @@ class CommentsBox extends Component {
     event.preventDefault();
     // Prevents page reload
     const { saveComment } = this.props;
-    const { comment } = this.state;
+    const { comment } = this.state; // Not keeping with DRY but not sure what else to do about this...
     saveComment(comment);
     this.setState({ comment: '' });
   };
 
   render() {
+    const { comment } = this.state;
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -36,7 +38,7 @@ class CommentsBox extends Component {
               className="textarea"
               placeholder="Add a comment"
               onChange={this.handleChange}
-              value={this.state.comment}
+              value={comment}
             />
           </div>
           <div>
