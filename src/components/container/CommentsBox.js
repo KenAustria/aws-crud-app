@@ -23,7 +23,7 @@ class CommentsBox extends Component {
     // Prevents page reload
     const { saveComment } = this.props;
     const { comment } = this.state; // Not keeping with DRY but not sure what else to do about this...
-    console.log(comment)
+    console.log(comment);
     saveComment(comment);
     this.setState({ comment: '' });
   };
@@ -45,9 +45,7 @@ class CommentsBox extends Component {
           </div>
           <div>
             {/* https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md */}
-            <button
-              className="button is-success is-outlined is-fullwidth buttons-spacing"
-            >
+            <button className="button is-success is-outlined is-fullwidth buttons-spacing" type="submit">
               Submit
             </button>
           </div>
