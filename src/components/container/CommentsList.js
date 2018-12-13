@@ -24,10 +24,9 @@ class CommentsList extends Component {
     return this.bulmaColorClasses[Math.floor(Math.random() * this.bulmaColorClasses.length)];
   }
 
-  renderComments() {
-    const { comments } = this.props;
-
+  renderComments(comments) {
     let i = 0;
+
     return (
       <div className="tile is-ancestor">
         <div className="tile flex-wrap">
@@ -49,7 +48,9 @@ class CommentsList extends Component {
   }
 
   render() {
-    return <div className="comments-list-wrapper">{this.renderComments()}</div>;
+    const { comments } = this.props;
+
+    return <div className="comments-list-wrapper">{this.renderComments(comments)}</div>;
   }
 }
 
