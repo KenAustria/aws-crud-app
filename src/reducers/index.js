@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import commentsReducer from 'reducers/comments';
+import { comments, fetchCommentsLoading, fetchCommentsErrored } from 'reducers/comments';
 
 export default combineReducers({
-  comments: commentsReducer,
+  comments,
+  fetchCommentsLoading,
+  fetchCommentsErrored
 });

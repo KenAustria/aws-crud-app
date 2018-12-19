@@ -3,11 +3,12 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from 'reducers';
 import reduxPromise from 'redux-promise';
+import thunk from "redux-thunk";
 import PropTypes from 'prop-types';
 
 const Root = ({ children, initialState = {} }) => {
   // Functional component with ES6 destructuring and default value for initialState
-  const store = createStore(reducers, initialState, applyMiddleware(reduxPromise));
+  const store = createStore(reducers, initialState, applyMiddleware(reduxPromise, thunk));
   return (
     <Provider store={store}>
       {children}
