@@ -41,28 +41,25 @@ const App = () => {
           </div>
         </section>
       </div>
-        <section>
-          <footer id="footer" className="footer">
-            <div className="content has-text-centered">
-              <p>
-                Refayat Haque &nbsp;
-                <FontAwesomeIcon icon={['fab', 'creative-commons']} /> &nbsp;
-                <FontAwesomeIcon icon={['fab', 'creative-commons-by']} /> &nbsp;
-                <FontAwesomeIcon icon={['fas', 'cat']} />
-                &nbsp; Theo &nbsp;
-                <FontAwesomeIcon icon={['fab', 'node-js']} /> &nbsp;
-                <FontAwesomeIcon icon={['fab', 'npm']} /> &nbsp;
-                <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp;
-                Redux, Redux-Thunk &nbsp;
-                <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} /> &nbsp;
-                Hosted by &nbsp;
-                <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} /> &nbsp;
-                and not &nbsp;
-                <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp;
-              </p>
-            </div>
-          </footer>
-        </section>
+      <section>
+        <footer id="footer" className="footer">
+          <div className="content has-text-centered">
+            <p>
+              Refayat Haque &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons-by']} /> &nbsp;
+              <FontAwesomeIcon icon={['fas', 'cat']} />
+              &nbsp; Theo &nbsp;
+              <FontAwesomeIcon icon={['fab', 'node-js']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'npm']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp; Redux, Redux-Thunk &nbsp;
+              <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} /> &nbsp; Hosted by &nbsp;
+              <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} /> &nbsp; and not &nbsp;
+              <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp;
+            </p>
+          </div>
+        </footer>
+      </section>
     </div>
   );
 };
