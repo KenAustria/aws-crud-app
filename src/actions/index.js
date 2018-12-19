@@ -13,10 +13,25 @@ export function saveComment(comment) {
   };
 }
 
+export function fetchCommentsLoading(bool) {
+  console.log('action fetchCommentsLoading:', bool);
+  return {
+    type: FETCH_COMMENTS_LOADING,
+    payload: bool,
+  };
+}
+
 export function fetchCommentsSuccess(response) {
   return {
     type: FETCH_COMMENTS_SUCCESS,
     payload: response,
+  };
+}
+
+export function fetchCommentsErrored(bool) {
+  return {
+    type: FETCH_COMMENTS_ERRORED,
+    payload: bool,
   };
 }
 
@@ -35,20 +50,5 @@ export function fetchComments() {
       // .then((response) => response.json())
       .then(response => dispatch(fetchCommentsSuccess(response)))
       .catch(() => dispatch(fetchCommentsErrored(true)));
-  };
-}
-
-export function fetchCommentsLoading(bool) {
-  console.log('action fetchCommentsLoading:', bool);
-  return {
-    type: FETCH_COMMENTS_LOADING,
-    payload: bool,
-  };
-}
-
-export function fetchCommentsErrored(bool) {
-  return {
-    type: FETCH_COMMENTS_ERRORED,
-    payload: bool,
   };
 }
