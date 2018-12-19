@@ -19,6 +19,9 @@ export function saveComment(comment) {
   };
 }
 
+// We know that our state needs to have 3 properties: fetchCommentsSuccess, fetchCommentsErrored and fetchCommentsLoading for this application to work as expected under all circumstances, which correlates to needing 3 unique actions.
+// Now, here is why action creators are different to actions and do not necessarily have a 1:1 relationship: we need a fourth action creator (fetchComments) that calls our 3 other action (creators) below depending on the status of fetching the data.
+
 export function fetchCommentsLoading(bool) {
   console.log('action fetchCommentsLoading:', bool);
   return {
