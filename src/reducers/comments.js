@@ -5,6 +5,10 @@ import {
   FETCH_COMMENTS_ERRORED,
 } from 'actions/types';
 
+// https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3
+// When an action is dispatched, a Reducer is the function that actually changes the state appropriate to that action – or returns the existing state if the action is not applicable to that reducer.
+// Reducers are “pure functions”. They should not have any side-effects nor mutate the state — they must return a modified copy.
+
 export function comments(state = [], action) {
   console.log(state);
   // https://eslint.org/docs/rules/no-case-declarations

@@ -6,8 +6,14 @@ import {
 } from 'actions/types';
 import axios from 'axios';
 
+// https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3
+// The only way to modify the state with Redux is through emitting an action, which is an object that describes what should change. Action creators are the functions that are dispatched to emit a change – all they do is return an action.
+
+// https://decembersoft.com/posts/whats-the-difference-between-action-and-action-creator-in-redux-js/
+// An action creator is a function that creates and returns an action.
 export function saveComment(comment) {
   return {
+    // An action is like a message that we send (i.e. dispatch) to our central Redux store. It can literally be anything. But ideally we want to stick to an agreed-upon pattern.
     type: SAVE_COMMENT,
     payload: comment,
   };
@@ -35,6 +41,9 @@ export function fetchCommentsErrored(bool) {
   };
 }
 
+// // https://decembersoft.com/posts/whats-the-difference-between-action-and-action-creator-in-redux-js/
+// By default, Redux action creators don’t support asynchronous actions like fetching data, so here’s where we utilise Redux Thunk. Thunk allows you to write action creators that return a function instead of an action.
+
 export function fetchComments() {
   return dispatch => {
     dispatch(fetchCommentsLoading(true));
@@ -47,7 +56,6 @@ export function fetchComments() {
         dispatch(fetchCommentsLoading(false));
         return response;
       })
-      // .then((response) => response.json())
       .then(response => dispatch(fetchCommentsSuccess(response)))
       .catch(() => dispatch(fetchCommentsErrored(true)));
   };
