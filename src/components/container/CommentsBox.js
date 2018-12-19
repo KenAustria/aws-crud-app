@@ -83,7 +83,7 @@ class CommentsBox extends Component {
 CommentsBox.propTypes = {
   saveComment: PropTypes.func,
   fetchComments: PropTypes.func,
-  fetchCommentsLoading: PropTypes.bool
+  fetchCommentsLoading: PropTypes.bool,
 };
 
 function mapStateToProps({ fetchCommentsLoading }) {
