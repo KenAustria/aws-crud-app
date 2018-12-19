@@ -51,7 +51,7 @@ export function fetchComments() {
   return dispatch => {
     dispatch(fetchCommentsLoading(true));
     axios
-      .get('http://jsonplaceholder.typicode.com/users')
+      .get('http://jsonplaceholder.typicode.com/comments')
       .then(response => {
         if (response.statusText !== 'OK') {
           throw Error(response.statusText);

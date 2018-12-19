@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Root from 'Root';
-import App from 'components/App';
+import App from 'components/presentation/App';
 import moxios from 'moxios';
 
 beforeEach(() => {
   moxios.install();
   moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
     status: 200,
-    response: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }],
+    response: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }]
   });
   // ^ Moxios intercepting axios' attempted AJAX call and returns an object to axios, fools axios into thinking the object it is getting is from a successful AJAX call
 });
