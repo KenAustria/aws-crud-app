@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from 'reducers';
 import reduxPromise from 'redux-promise';
-import thunk from "redux-thunk";
+import thunk from 'redux-thunk';
 import PropTypes from 'prop-types';
 
 const Root = ({ children, initialState = {} }) => {

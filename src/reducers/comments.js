@@ -1,4 +1,9 @@
-import { SAVE_COMMENT, FETCH_COMMENTS_LOADING, FETCH_COMMENTS_SUCCESS, FETCH_COMMENTS_ERRORED } from 'actions/types';
+import {
+  SAVE_COMMENT,
+  FETCH_COMMENTS_LOADING,
+  FETCH_COMMENTS_SUCCESS,
+  FETCH_COMMENTS_ERRORED,
+} from 'actions/types';
 
 export function comments(state = [], action) {
   console.log(state);
@@ -8,7 +13,7 @@ export function comments(state = [], action) {
       return [...state, action.payload];
     }
     case FETCH_COMMENTS_SUCCESS: {
-      console.log(action.payload)
+      console.log(action.payload);
       const comments = action.payload.data.map(comment => comment.name);
       return [...state, ...comments];
     }

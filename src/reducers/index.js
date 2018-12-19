@@ -4,5 +4,5 @@ import { comments, fetchCommentsLoading, fetchCommentsErrored } from 'reducers/c
 export default combineReducers({
   comments,
   fetchCommentsLoading,
-  fetchCommentsErrored
+  fetchCommentsErrored,
 });

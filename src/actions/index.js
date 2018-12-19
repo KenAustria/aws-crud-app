@@ -1,4 +1,9 @@
-import { SAVE_COMMENT, FETCH_COMMENTS_LOADING, FETCH_COMMENTS_SUCCESS, FETCH_COMMENTS_ERRORED } from 'actions/types';
+import {
+  SAVE_COMMENT,
+  FETCH_COMMENTS_LOADING,
+  FETCH_COMMENTS_SUCCESS,
+  FETCH_COMMENTS_ERRORED,
+} from 'actions/types';
 import axios from 'axios';
 
 export function saveComment(comment) {
@@ -11,38 +16,39 @@ export function saveComment(comment) {
 export function fetchCommentsSuccess(response) {
   return {
     type: FETCH_COMMENTS_SUCCESS,
-    payload: response
+    payload: response,
   };
 }
 
 export function fetchComments() {
-  return (dispatch) => {
+  return dispatch => {
     dispatch(fetchCommentsLoading(true));
-    axios.get('http://jsonplaceholder.typicode.com/users')
-    .then((response) => {
-      if (response.statusText !== "OK") {
-        throw Error(response.statusText);
-      }
-      dispatch(fetchCommentsLoading(false));
-      return response;
-    })
-    // .then((response) => response.json())
-    .then((response) => dispatch(fetchCommentsSuccess(response)))
-    .catch(() => dispatch(fetchCommentsErrored(true)));
+    axios
+      .get('http://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        if (response.statusText !== 'OK') {
+          throw Error(response.statusText);
+        }
+        dispatch(fetchCommentsLoading(false));
+        return response;
+      })
+      // .then((response) => response.json())
+      .then(response => dispatch(fetchCommentsSuccess(response)))
+      .catch(() => dispatch(fetchCommentsErrored(true)));
   };
 }
 
 export function fetchCommentsLoading(bool) {
-  console.log('action fetchCommentsLoading:', bool)
+  console.log('action fetchCommentsLoading:', bool);
   return {
     type: FETCH_COMMENTS_LOADING,
-    payload: bool
+    payload: bool,
   };
 }
 
 export function fetchCommentsErrored(bool) {
   return {
     type: FETCH_COMMENTS_ERRORED,
-    payload: bool
+    payload: bool,
   };
 }

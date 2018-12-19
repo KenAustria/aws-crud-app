@@ -33,7 +33,7 @@ class CommentsBox extends Component {
   render() {
     const { comment } = this.state;
     const { fetchComments, fetchCommentsLoading } = this.props;
-    console.log(fetchCommentsLoading)
+    console.log(fetchCommentsLoading);
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -49,18 +49,30 @@ class CommentsBox extends Component {
           <div className="field is-grouped is-fullwidth">
             {/* https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md */}
             <p className="control">
-              <button
-                className="button is-success is-outlined buttons-spacing"
-                type="submit"
-                >
+              <button className="button is-success is-outlined buttons-spacing" type="submit">
                 Submit
               </button>
             </p>
             <p className="control">
-              {fetchCommentsLoading === true ? (<button className="fetch-comments button is-warning is-outlined is-loading buttons-spacing" type="button" disabled>Fetch</button>) : (<button className="fetch-comments button is-info is-outlined buttons-spacing" type="button" onClick={fetchComments}>Fetch</button>)}
+              {fetchCommentsLoading === true ? (
+                <button
+                  className="fetch-comments button is-warning is-outlined is-loading buttons-spacing"
+                  type="button"
+                  disabled
+                >
+                  Fetch
+                </button>
+              ) : (
+                <button
+                  className="fetch-comments button is-info is-outlined buttons-spacing"
+                  type="button"
+                  onClick={fetchComments}
+                >
+                  Fetch
+                </button>
+              )}
             </p>
           </div>
-
         </form>
       </div>
     );
@@ -83,7 +95,7 @@ function mapStateToProps({ fetchCommentsLoading }) {
 // https://github.com/reduxjs/react-redux/blob/master/docs/api.md
 export default connect(
   mapStateToProps,
-  { fetchComments, saveComment }
+  { fetchComments, saveComment },
 )(CommentsBox);
 // https://github.com/reduxjs/react-redux/blob/master/docs/api.md#inject-todos-and-all-action-creators
 // export default connect(
