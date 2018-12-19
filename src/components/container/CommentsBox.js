@@ -49,14 +49,14 @@ class CommentsBox extends Component {
           <div className="field is-grouped is-fullwidth">
             {/* https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md */}
             <p className="control">
-              <button className="button is-success is-outlined buttons-spacing" type="submit">
+              <button className="button is-success is-outlined is-large buttons-spacing" type="submit">
                 Submit
               </button>
             </p>
             <p className="control">
               {fetchCommentsLoading === true ? (
                 <button
-                  className="fetch-comments button is-warning is-outlined is-loading buttons-spacing"
+                  className="fetch-comments button is-warning is-outlined is-large is-loading buttons-spacing"
                   type="button"
                   disabled
                 >
@@ -64,7 +64,7 @@ class CommentsBox extends Component {
                 </button>
               ) : (
                 <button
-                  className="fetch-comments button is-info is-outlined buttons-spacing"
+                  className="fetch-comments button is-info is-outlined is-large buttons-spacing"
                   type="button"
                   onClick={fetchComments}
                 >

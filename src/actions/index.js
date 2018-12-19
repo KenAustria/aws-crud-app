@@ -19,6 +19,7 @@ export function saveComment(comment) {
   };
 }
 
+// https://medium.com/@stowball/a-dummys-guide-to-redux-and-thunk-in-react-d8904a7005d3
 // We know that our state needs to have 3 properties: fetchCommentsSuccess, fetchCommentsErrored and fetchCommentsLoading for this application to work as expected under all circumstances, which correlates to needing 3 unique actions.
 // Now, here is why action creators are different to actions and do not necessarily have a 1:1 relationship: we need a fourth action creator (fetchComments) that calls our 3 other action (creators) below depending on the status of fetching the data.
 
@@ -44,7 +45,6 @@ export function fetchCommentsErrored(bool) {
   };
 }
 
-// // https://decembersoft.com/posts/whats-the-difference-between-action-and-action-creator-in-redux-js/
 // By default, Redux action creators don’t support asynchronous actions like fetching data, so here’s where we utilise Redux Thunk. Thunk allows you to write action creators that return a function instead of an action.
 
 export function fetchComments() {
