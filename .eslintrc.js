@@ -38,7 +38,7 @@ module.exports = {
 		'no-alert': 'error', // airbnb is using warn
 
 		'no-shadow': 'off',
-		'no-irregular-whitespace': 'off'
+		'no-irregular-whitespace': 'off',
 
 		'no-param-reassign': 'off', // Not our taste?
 		"radix": "off", // parseInt, parseFloat radix turned off. Not my taste.
