@@ -67,7 +67,7 @@ export function fetchCommentsErrored(bool) {
 //   };
 // }
 
-export const fetchComments = () => (dispatch) => {
+export const fetchComments = () => dispatch => {
   dispatch(fetchCommentsLoading(true));
   return axios({
     url: 'http://jsonplaceholder.typicode.com/comments',
