@@ -5,7 +5,6 @@ import App from 'components/presentation/App';
 import moxios from 'moxios';
 
 describe('integration test', () => {
-
   beforeEach(() => {
     moxios.install();
     moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
@@ -20,7 +19,6 @@ describe('integration test', () => {
   });
 
   it('tests', done => {
-
     // Attempt to render the *entire* app.
     const wrapped = mount(
       <Root>
