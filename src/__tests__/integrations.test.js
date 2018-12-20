@@ -45,7 +45,6 @@ describe('integration test', () => {
       { type: 'FETCH_COMMENTS_LOADING', payload: false },
     ];
 
-
     // Need to introduce a TINY little pause for moxios to intercept axios call when action creator called, this way the line below will expect whatever is returned by moxios and not axios
     moxios.wait(() => {
       wrapped.update();
