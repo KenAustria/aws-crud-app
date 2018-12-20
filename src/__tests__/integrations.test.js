@@ -3,9 +3,9 @@ import { mount } from 'enzyme';
 import Root from 'Root';
 import App from 'components/presentation/App';
 import moxios from 'moxios';
-import * as actions from 'actions';
 
 describe('integration test', () => {
+
   beforeEach(() => {
     moxios.install();
     moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
@@ -20,12 +20,14 @@ describe('integration test', () => {
   });
 
   it('tests', done => {
+
     // Attempt to render the *entire* app.
     const wrapped = mount(
       <Root>
         <App />
       </Root>,
     );
+
     // Find the 'fetchComments' button and click it.
     wrapped.find('.fetch-comments').simulate('click');
     // ^ Will kick off data fetching process.

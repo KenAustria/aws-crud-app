@@ -1,15 +1,16 @@
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-
 import { saveComment, fetchComments } from 'actions';
 import { SAVE_COMMENT, FETCH_COMMENTS_LOADING, FETCH_COMMENTS_SUCCESS } from 'actions/types';
 
 describe('saveComment', () => {
+
   it('Has the correct type', () => {
     const action = saveComment();
     expect(action.type).toEqual(SAVE_COMMENT);
   });
+
   it('Has the correct payload', () => {
     const action = saveComment('new comment');
     expect(action.payload).toEqual('new comment');
@@ -17,6 +18,7 @@ describe('saveComment', () => {
 });
 
 describe('Redux-Thunk working properly, dispatch will return associated Action Creators to ensure axios API call succesfully pulling data', () => {
+
   const middlewares = [thunk];
   const mockStore = configureMockStore(middlewares);
 
@@ -34,6 +36,7 @@ describe('Redux-Thunk working properly, dispatch will return associated Action C
   });
 
   it('tests', done => {
+
     const store = mockStore({ payload: {} });
 
     const expectedActions = [
