@@ -13,7 +13,6 @@ import {
 // Each reducer takes 2 parameters: the previous state (state) and an action object. We can also use an ES6 feature called default parameters to set the default initial state, which we are doing in reducers below.
 
 export function comments(state = [], action) {
-  console.log(state);
   // https://eslint.org/docs/rules/no-case-declarations
   switch (action.type) {
     case SAVE_COMMENT: {
@@ -22,12 +21,10 @@ export function comments(state = [], action) {
     // Why is this not in a separate reducer function?
     // This is because there could be multiple conditions which would always return an array of comments: it could return all in the case of a fetch_comments_success, it could return a subset of items after a delete action is dispatched, or it could return an empty array if everything is deleted, or as in this function, could return an array of comments which has both fetched and user input data.
     case FETCH_COMMENTS_SUCCESS: {
-      console.log(action.payload);
       const comments = action.payload.map(comment => comment.name);
       return [...state, ...comments];
     }
     default: {
-      console.log(state);
       return state;
     }
   }
