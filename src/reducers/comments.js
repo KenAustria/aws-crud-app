@@ -23,7 +23,7 @@ export function comments(state = [], action) {
     // This is because there could be multiple conditions which would always return an array of comments: it could return all in the case of a fetch_comments_success, it could return a subset of items after a delete action is dispatched, or it could return an empty array if everything is deleted, or as in this function, could return an array of comments which has both fetched and user input data.
     case FETCH_COMMENTS_SUCCESS: {
       console.log(action.payload);
-      const comments = action.payload.data.map(comment => comment.name);
+      const comments = action.payload.map(comment => comment.name);
       return [...state, ...comments];
     }
     default: {

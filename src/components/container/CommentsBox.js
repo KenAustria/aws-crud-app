@@ -59,7 +59,7 @@ class CommentsBox extends Component {
             <p className="control">
               {fetchCommentsLoading === true ? (
                 <button
-                  className="fetch-comments button is-warning is-outlined is-large is-loading buttons-spacing"
+                  className="button is-warning is-outlined is-large is-loading buttons-spacing"
                   type="button"
                   disabled
                 >
@@ -96,12 +96,13 @@ function mapStateToProps({ fetchCommentsLoading }) {
   };
 }
 
-// https://github.com/reduxjs/react-redux/blob/master/docs/api.md
 export default connect(
   mapStateToProps,
   { fetchComments, saveComment },
 )(CommentsBox);
+
 // https://github.com/reduxjs/react-redux/blob/master/docs/api.md#inject-todos-and-all-action-creators
+// Not doing this because it resulted in us unable to work properly with mapStateToProps
 // export default connect(
 //   mapStateToProps,
 //   actionCreators

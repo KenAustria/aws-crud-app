@@ -52,7 +52,8 @@ const App = () => {
               &nbsp; Theo &nbsp;
               <FontAwesomeIcon icon={['fab', 'node-js']} /> &nbsp;
               <FontAwesomeIcon icon={['fab', 'npm']} /> &nbsp;
-              <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp; Redux, Redux-Thunk &nbsp;
+              <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp; Redux, Redux-Thunk, Bulma, Axios,
+              Moxios &nbsp;
               <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} /> &nbsp; Hosted by &nbsp;
               <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} /> &nbsp; and not &nbsp;
               <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp;
