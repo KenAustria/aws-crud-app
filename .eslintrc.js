@@ -37,6 +37,9 @@ module.exports = {
 		'no-console': 'off', // airbnb is using warn and I (Refayat) refuse to comply with what I think is quite ridiculous...
 		'no-alert': 'error', // airbnb is using warn
 
+		'no-shadow': 'off',
+		'no-irregular-whitespace': 'off',
+
 		'no-param-reassign': 'off', // Not our taste?
 		"radix": "off", // parseInt, parseFloat radix turned off. Not my taste.
 

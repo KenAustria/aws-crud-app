@@ -8,11 +8,29 @@
   margin: 0rem 0rem 1.25rem 0rem;
 }
 
+/* https://stackoverflow.com/questions/42931638/how-to-make-tiles-wrap-with-bulma-css */
 .flex-wrap {
   flex-wrap: wrap;
 }
-/* https://stackoverflow.com/questions/42931638/how-to-make-tiles-wrap-with-bulma-css */
 
 .buttons-spacing {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* https://medium.freecodecamp.org/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 10rem; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem /* Footer height */
 }

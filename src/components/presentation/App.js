@@ -23,27 +23,40 @@ library.add(fab, fas, far);
 
 const App = () => {
   return (
-    <div>
-      <section className="hero is-primary">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">Comments</h1>
-            <h2 className="subtitle">
-              Simple CRUD App built with React (w/ Jest & Enzyme Testing) and AWS Microservices
-            </h2>
+    <div id="page-container">
+      <div id="content-wrap">
+        <section className="hero is-primary">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">Comments</h1>
+              <h2 className="subtitle">
+                Simple CRUD App built with React (w/ Jest & Enzyme Testing) and AWS Microservices
+              </h2>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section>
+          <div className="container is-fluid">
+            <CommentsApp />
+          </div>
+        </section>
+      </div>
       <section>
-        <div className="container is-fluid">
-          <CommentsApp />
-        </div>
-      </section>
-      <section>
-        <footer className="footer">
+        <footer id="footer" className="footer">
           <div className="content has-text-centered">
             <p>
-              <FontAwesomeIcon icon={['fas', 'cat']} size="6x" transform={{ rotate: 38 }} />
+              Refayat Haque &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons-by']} /> &nbsp;
+              <FontAwesomeIcon icon={['fas', 'cat']} />
+              &nbsp; Theo &nbsp;
+              <FontAwesomeIcon icon={['fab', 'node-js']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'npm']} /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp; Redux, Redux-Thunk, Bulma, Axios,
+              Moxios &nbsp;
+              <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} /> &nbsp; Hosted by &nbsp;
+              <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} /> &nbsp; and not &nbsp;
+              <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp;
             </p>
           </div>
         </footer>
