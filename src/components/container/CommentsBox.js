@@ -16,7 +16,6 @@ class CommentsBox extends Component {
 
   handleChange = event => {
     this.setState({ comment: event.target.value });
-    const { comment } = this.state;
   };
 
   handleSubmit = event => {
