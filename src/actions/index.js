@@ -35,7 +35,7 @@ export function fetchCommentsSuccess(response) {
   console.log('Action Creator fetchCommentsSuccess invoked');
   return {
     type: FETCH_COMMENTS_SUCCESS,
-    payload: response,
+    payload: response.data,
   };
 }
 
