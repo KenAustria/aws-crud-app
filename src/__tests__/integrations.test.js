@@ -35,21 +35,23 @@ describe('integration test', () => {
     wrapped.find('.fetch-comments').simulate('click');
     // ^ Will kick off data fetching process
 
+    const store = mockStore({ payload: {} });
+
+    store.dispatch(actions.fetchComments());
+
     const expectedActions = [
       { type: 'FETCH_COMMENTS_LOADING', payload: true },
-      // { type: 'FETCH_COMMENTS_SUCCESS', payload: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }] },
-      // { type: 'FETCH_COMMENTS_LOADING', payload: false },
+      { type: 'FETCH_COMMENTS_SUCCESS', payload: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }] },
+      { type: 'FETCH_COMMENTS_LOADING', payload: false },
     ];
 
-    const store = mockStore({ payload: {} });
 
     // Need to introduce a TINY little pause for moxios to intercept axios call when action creator called, this way the line below will expect whatever is returned by moxios and not axios
     moxios.wait(() => {
       wrapped.update();
-      store.dispatch(actions.fetchComments());
-      console.log('store.getActions()', store.getActions());
       expect(store.getActions()).toEqual(expectedActions);
       expect(wrapped.find('article')).toHaveLength(2);
+      // console.log('store.getActions()', store.getActions());
       done();
       // ^ Jest will consider the test complete only once we invoke the done function
       wrapped.unmount();
