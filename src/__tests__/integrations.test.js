@@ -6,7 +6,6 @@ import moxios from 'moxios';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import * as actions from 'actions';
-import expect from 'expect';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -44,6 +43,7 @@ describe('integration test', () => {
 
     const store = mockStore({ payload: {} });
 
+    // Need to introduce a TINY little pause for moxios to intercept axios call when action creator called, this way the line below will expect whatever is returned by moxios and not axios
     moxios.wait(() => {
       wrapped.update();
       store.dispatch(actions.fetchComments());
@@ -51,6 +51,9 @@ describe('integration test', () => {
       expect(store.getActions()).toEqual(expectedActions);
       expect(wrapped.find('article')).toHaveLength(2);
       done();
+      // ^ Jest will consider the test complete only once we invoke the done function
+      wrapped.unmount();
+      // ^ Clean up at the end of a test
     });
   });
 });
