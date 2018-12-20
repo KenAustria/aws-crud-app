@@ -36,8 +36,6 @@ describe('integration test', () => {
     wrapped.find('.fetch-comments').simulate('click');
     // ^ Will kick off data fetching process
 
-    console.log('helloWorld');
-
     const expectedActions = [
       { type: 'FETCH_COMMENTS_LOADING', payload: true },
       // { type: 'FETCH_COMMENTS_SUCCESS', payload: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }] },
@@ -46,17 +44,12 @@ describe('integration test', () => {
 
     const store = mockStore({ payload: {} });
 
-    store.dispatch(actions.fetchComments());
-
-    console.log('store.getActions() 1', store.getActions());
-
-    // expect(store.getActions()).toEqual(expectedActions);
-
     moxios.wait(() => {
       wrapped.update();
       store.dispatch(actions.fetchComments());
-      console.log('store.getActions() 2', store.getActions());
+      console.log('store.getActions()', store.getActions());
       expect(store.getActions()).toEqual(expectedActions);
+      expect(wrapped.find('article')).toHaveLength(2);
       done();
     });
   });

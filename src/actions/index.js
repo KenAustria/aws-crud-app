@@ -47,22 +47,38 @@ export function fetchCommentsErrored(bool) {
 
 // By default, Redux action creators don’t support asynchronous actions like fetching data, so here’s where we utilise Redux Thunk. Thunk allows you to write action creators that return a function instead of an action.
 
-export function fetchComments() {
-  console.log('fetchComments Action Creator invoked');
-  return dispatch => {
-    dispatch(fetchCommentsLoading(true));
-    console.log('fetchComments Action Creator dispatched fetchCommentsLoading Action Creator');
-    axios
-      .get('http://jsonplaceholder.typicode.com/comments')
-      .then(response => {
-        if (response.statusText !== 'OK') {
-          throw Error(response.statusText);
-        }
-        dispatch(fetchCommentsLoading(false));
-        console.log('fetchComments Action Creator Axios response:', response);
-        return response;
-      })
-      .then(response => dispatch(fetchCommentsSuccess(response)))
-      .catch(() => dispatch(fetchCommentsErrored(true)));
-  };
-}
+// export function fetchComments() {
+//   console.log('fetchComments Action Creator invoked');
+//   return dispatch => {
+//     dispatch(fetchCommentsLoading(true));
+//     console.log('fetchComments Action Creator dispatched fetchCommentsLoading Action Creator');
+//     axios
+//       .get('http://jsonplaceholder.typicode.com/comments')
+//       .then(response => {
+//         if (response.statusText !== 'OK') {
+//           throw Error(response.statusText);
+//         }
+//         dispatch(fetchCommentsLoading(false));
+//         console.log('fetchComments Action Creator Axios response:', response);
+//         return response;
+//       })
+//       .then(response => dispatch(fetchCommentsSuccess(response)))
+//       .catch(() => dispatch(fetchCommentsErrored(true)));
+//   };
+// }
+
+export const fetchComments = () => (dispatch) => {
+  dispatch(fetchCommentsLoading(true));
+  return axios({
+    url: 'http://jsonplaceholder.typicode.com/comments',
+    method: 'get',
+  })
+    .then(response => {
+      dispatch(fetchCommentsSuccess(response));
+      return response;
+    })
+    .catch(() => {
+      dispatch(fetchCommentsErrored(true));
+      return true;
+    });
+};
