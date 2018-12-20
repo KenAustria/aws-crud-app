@@ -12,8 +12,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('integration test', () => {
-
-  beforeEach(function () {
+  beforeEach(() => {
     moxios.install();
     moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
       status: 200,
@@ -22,7 +21,7 @@ describe('integration test', () => {
     // ^ Moxios intercepting axios' attempted AJAX call and returns an object to axios, fools axios into thinking the object it is getting is from a successful AJAX call
   });
 
-  afterEach(function () {
+  afterEach(() => {
     moxios.uninstall();
   });
 
@@ -37,7 +36,7 @@ describe('integration test', () => {
     wrapped.find('.fetch-comments').simulate('click');
     // ^ Will kick off data fetching process
 
-    console.log('helloWorld')
+    console.log('helloWorld');
 
     const expectedActions = [
       { type: 'FETCH_COMMENTS_LOADING', payload: true },
@@ -45,9 +44,9 @@ describe('integration test', () => {
       // { type: 'FETCH_COMMENTS_LOADING', payload: false },
     ];
 
-    const store = mockStore({ payload: {} })
+    const store = mockStore({ payload: {} });
 
-    store.dispatch(actions.fetchComments())
+    store.dispatch(actions.fetchComments());
 
     console.log('store.getActions() 1', store.getActions());
 
@@ -55,7 +54,7 @@ describe('integration test', () => {
 
     moxios.wait(() => {
       wrapped.update();
-      store.dispatch(actions.fetchComments())
+      store.dispatch(actions.fetchComments());
       console.log('store.getActions() 2', store.getActions());
       expect(store.getActions()).toEqual(expectedActions);
       done();
