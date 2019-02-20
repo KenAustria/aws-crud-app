@@ -59,7 +59,8 @@ const App = () => {
               <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp; Just kidding! &nbsp;
               <FontAwesomeIcon icon={['fab', 'aws']} size="lg" /> &nbsp; hosted with{' '}
               <a href="https://github.com/refayathaque/aws-crud-app">code</a> on &nbsp;
-              <FontAwesomeIcon icon={['fab', 'github']} size="lg" />
+              <FontAwesomeIcon icon={['fab', 'github']} size="lg" /> &nbsp;
+              <i>v1.0</i>
             </p>
           </div>
         </footer>
