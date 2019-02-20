@@ -24,7 +24,6 @@ export function saveComment(comment) {
 // Now, here is why action creators are different to actions and do not necessarily have a 1:1 relationship: we need a fourth action creator (fetchComments) that calls our 3 other action (creators) below depending on the status of fetching the data.
 
 export function fetchCommentsLoading(bool) {
-  console.log('Action Creator fetchCommentsLoading invoked');
   return {
     type: FETCH_COMMENTS_LOADING,
     payload: bool,
@@ -32,7 +31,6 @@ export function fetchCommentsLoading(bool) {
 }
 
 export function fetchCommentsSuccess(response) {
-  console.log('Action Creator fetchCommentsSuccess invoked');
   return {
     type: FETCH_COMMENTS_SUCCESS,
     payload: response.data,
@@ -40,7 +38,6 @@ export function fetchCommentsSuccess(response) {
 }
 
 export function fetchCommentsErrored(bool) {
-  console.log('Action Creator fetchCommentsErrored invoked');
   return {
     type: FETCH_COMMENTS_ERRORED,
     payload: bool,
@@ -49,37 +46,19 @@ export function fetchCommentsErrored(bool) {
 
 // By default, Redux action creators don’t support asynchronous actions like fetching data, so here’s where we utilise Redux Thunk. Thunk allows you to write action creators that return a function instead of an action.
 
-// export function fetchComments() {
-//   return dispatch => {
-//     dispatch(fetchCommentsLoading(true));
-//     axios
-//       .get('http://jsonplaceholder.typicode.com/comments')
-//       .then(response => {
-//         if (response.statusText !== 'OK') {
-//           throw Error(response.statusText);
-//         }
-//         dispatch(fetchCommentsLoading(false));
-//         return response;
-//       })
-//       .then(response => dispatch(fetchCommentsSuccess(response)))
-//       .catch(() => dispatch(fetchCommentsErrored(true)));
-//   };
-// }
-
-export const fetchComments = () => dispatch => {
-  dispatch(fetchCommentsLoading(true));
-  return axios({
-    url: 'http://jsonplaceholder.typicode.com/comments',
-    method: 'get',
-  })
-    .then(response => {
-      dispatch(fetchCommentsSuccess(response));
-      dispatch(fetchCommentsLoading(false));
-      return response;
-    })
-    .catch(() => {
-      dispatch(fetchCommentsErrored(true));
-      dispatch(fetchCommentsLoading(false));
-      return true;
-    });
-};
+export function fetchComments() {
+  return dispatch => {
+    dispatch(fetchCommentsLoading(true));
+    axios
+      .get('http://jsonplaceholder.typicode.com/comments')
+      .then(response => {
+        if (response.status !== 200) {
+          throw Error(response.statusText);
+        }
+        dispatch(fetchCommentsLoading(false));
+        return response;
+      })
+      .then(response => dispatch(fetchCommentsSuccess(response)))
+      .catch(() => dispatch(fetchCommentsErrored(true)));
+  };
+}

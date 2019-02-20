@@ -17,12 +17,10 @@ beforeEach(() => {
 });
 
 it('CommentsList creates one <article> per comment', () => {
-  console.log(wrapped.find('article').length);
   expect(wrapped.find('article')).toHaveLength(2);
 });
 
 it('CommentsList shows text for each comment', () => {
-  console.log(wrapped.render().text());
   expect(wrapped.render().text()).toContain('comment 1');
   expect(wrapped.render().text()).toContain('comment 2');
 });

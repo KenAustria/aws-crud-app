@@ -16,8 +16,6 @@ class CommentsBox extends Component {
 
   handleChange = event => {
     this.setState({ comment: event.target.value });
-    const { comment } = this.state;
-    console.log(comment);
   };
 
   handleSubmit = event => {
@@ -25,7 +23,6 @@ class CommentsBox extends Component {
     // Prevents page reload
     const { saveComment } = this.props;
     const { comment } = this.state; // Not keeping with DRY but not sure what else to do about this...
-    console.log(comment);
     saveComment(comment);
     this.setState({ comment: '' });
   };
@@ -33,7 +30,6 @@ class CommentsBox extends Component {
   render() {
     const { comment } = this.state;
     const { fetchComments, fetchCommentsLoading } = this.props;
-    console.log(fetchCommentsLoading);
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -90,7 +86,6 @@ CommentsBox.propTypes = {
 };
 
 function mapStateToProps({ fetchCommentsLoading }) {
-  console.log(fetchCommentsLoading);
   return {
     fetchCommentsLoading,
   };

@@ -60,7 +60,6 @@ CommentsList.propTypes = {
 };
 
 function mapStateToProps({ comments }) {
-  console.log(comments);
   return {
     comments,
   };

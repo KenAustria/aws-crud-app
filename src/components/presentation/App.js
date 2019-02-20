@@ -46,17 +46,21 @@ const App = () => {
           <div className="content has-text-centered">
             <p>
               Refayat Haque &nbsp;
-              <FontAwesomeIcon icon={['fab', 'creative-commons']} /> &nbsp;
-              <FontAwesomeIcon icon={['fab', 'creative-commons-by']} /> &nbsp;
-              <FontAwesomeIcon icon={['fas', 'cat']} />
-              &nbsp; Theo &nbsp;
-              <FontAwesomeIcon icon={['fab', 'node-js']} /> &nbsp;
-              <FontAwesomeIcon icon={['fab', 'npm']} /> &nbsp;
-              <FontAwesomeIcon icon={['fab', 'react']} /> &nbsp; Redux, Redux-Thunk, Bulma, Axios,
-              Moxios &nbsp;
-              <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} /> &nbsp; Hosted by &nbsp;
-              <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} /> &nbsp; and not &nbsp;
-              <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons']} size="lg" /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'creative-commons-by']} size="lg" /> &nbsp;
+              <FontAwesomeIcon icon={['fas', 'cat']} size="lg" /> &nbsp; Theo &nbsp;
+              <FontAwesomeIcon icon={['fab', 'node-js']} size="lg" /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'npm']} size="lg" /> &nbsp;
+              <FontAwesomeIcon icon={['fab', 'react']} size="lg" /> &nbsp; Redux, Redux-Thunk,
+              Bulma, Axios, Moxios &nbsp;
+              <FontAwesomeIcon icon={['fab', 'font-awesome-alt']} size="lg" /> &nbsp; Hosted by
+              &nbsp;
+              <FontAwesomeIcon icon={['fab', 'pied-piper-pp']} size="lg" /> &nbsp; and not &nbsp;
+              <FontAwesomeIcon icon={['fab', 'hooli']} size="lg" /> &nbsp; Just kidding! &nbsp;
+              <FontAwesomeIcon icon={['fab', 'aws']} size="lg" /> &nbsp; hosted with{' '}
+              <a href="https://github.com/refayathaque/aws-crud-app">code</a> on &nbsp;
+              <FontAwesomeIcon icon={['fab', 'github']} size="lg" /> &nbsp;
+              <i>v1.0</i>
             </p>
           </div>
         </footer>
